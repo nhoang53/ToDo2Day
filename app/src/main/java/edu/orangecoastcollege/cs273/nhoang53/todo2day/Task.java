@@ -16,11 +16,22 @@ public class Task {
     /**
      * Creates a default <code>Task</code> with an id of -1, empty description and not done status.
      */
-    public Task()
+    /*public Task()
     {
         mId = -1;
         mDescription = "";
         mIsDone = 0;
+    }*/
+
+    /**
+     * Creates a new <code>Task</code> from user input. Id is irrelevent, will be
+     * assigned automatically
+     * @param desc
+     * @param done
+     */
+    public Task(String desc, int done) // used when user create new Task
+    {
+        this(-1, desc, done); // call second constructor
     }
 
     /**
@@ -29,7 +40,7 @@ public class Task {
      * @param desc The task description
      * @param done The task status
      */
-    public Task(int id, String desc, int done) {
+    public Task(int id, String desc, int done) { // used when getAllTask
         mId = id;
         mDescription = desc;
         mIsDone = done;
